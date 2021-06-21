@@ -25,13 +25,13 @@ window.addEventListener('load', ()=>{
             inputPlaceholder: '2'
         })
 
-        administracion(metrosCuadrados, tipoCasa);
+        await administracion(metrosCuadrados, tipoCasa);
         
 
-        cuotaDeAseo(metrosCuadrados, tipoCasa);
+        await cuotaDeAseo(metrosCuadrados, tipoCasa);
         
 
-        derechosDeGimnasio(numResidentes);
+        await derechosDeGimnasio(numResidentes);
         
     })
 
