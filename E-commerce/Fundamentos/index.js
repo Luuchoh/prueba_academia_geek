@@ -25,14 +25,14 @@ window.addEventListener('load', ()=>{
             inputPlaceholder: '2'
         })
 
-        var result
-        let resulta = derechosDeGimnasio(numResidentes).then(function(r){
-            return r;
-        })
-        console.log(result);
-        console.log(resulta);
-        console.log(administracion(metrosCuadrados, tipoCasa))
-        console.log(cuotaDeAseo(metrosCuadrados, tipoCasa))
+        administracion(metrosCuadrados, tipoCasa);
+        
+
+        cuotaDeAseo(metrosCuadrados, tipoCasa);
+        
+
+        derechosDeGimnasio(numResidentes);
+        
     })
 
 
@@ -43,11 +43,11 @@ window.addEventListener('load', ()=>{
 
 function administracion(metrosCuadrados, tipoCasa){
     if (Number(metrosCuadrados && tipoCasa === 'Casa')){
-        return metrosCuadrados * 1500 + 100000;
+        return Swal.fire('Administracion:' + (metrosCuadrados * 1500 + 100000));
     } else if(Number(metrosCuadrados) && tipoCasa === 'Apartamento'){
-        return metrosCuadrados * 1500 + 50000;
+        return Swal.fire('Administracion: ' + (metrosCuadrados * 1500 + 50000));
     } else {
-        return 'Por favor sigue el formato indicado';
+        return Swal.fire('Por favor sigue el formato indicado');
     }
 }
 
@@ -56,7 +56,7 @@ function cuotaDeAseo(metrosCuadrados, tipoCasa){
     let porcentajeAdmin= admin * 0.1;
     let adicionalMt2= metrosCuadrados * 1000;
 
-    return porcentajeAdmin + adicionalMt2;
+    return Swal.fire('Cuota de aseo: ' + (porcentajeAdmin + adicionalMt2));
 }
 
 async function derechosDeGimnasio(numResidentes){
@@ -166,9 +166,9 @@ async function derechosDeGimnasio(numResidentes){
 
         totalDeGimnasio =  sumaMujeres + sumaHombres;
 
-        return totalDeGimnasio;
+        return Swal.fire('Derecho de gimnasio: ' +totalDeGimnasio );
 
     } else{
-        return totalDeGimnasio;
+        return Swal.fire('Derecho de gimnasio: ' +totalDeGimnasio );
     }
 }
