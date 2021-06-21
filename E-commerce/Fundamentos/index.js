@@ -3,21 +3,21 @@ window.addEventListener('load', ()=>{
     let btnCalcular =  document.querySelector('#btn-calcular');
 
     btnCalcular.addEventListener('click', async function(e){
-        // const {value: metrosCuadrados} = await Swal.fire({
-        //     input: 'text',
-        //     inputLabel: '¿Cuantos metros cuadrados mide tu casa?',
-        //     inputPlaceholder: '200'
-        //   })
+        const {value: metrosCuadrados} = await Swal.fire({
+            input: 'text',
+            inputLabel: '¿Cuantos metros cuadrados mide tu casa?',
+            inputPlaceholder: '200'
+          })
 
-        // const {value: tipoCasa} = await Swal.fire({
-        //     input: 'select',
-        //     inputOptions: {
-        //             Casa: '1. Casa',
-        //             Apartamento: '2. Apartamento'
-        //         },
-        //     inputLabel: '¿Que tipo de casa tienes? \n1.',
-        //     inputPlaceholder: 'Selecciona el tipo de casa'
-        // })
+        const {value: tipoCasa} = await Swal.fire({
+            input: 'select',
+            inputOptions: {
+                    Casa: '1. Casa',
+                    Apartamento: '2. Apartamento'
+                },
+            inputLabel: '¿Que tipo de casa tienes?',
+            inputPlaceholder: 'Selecciona el tipo de casa'
+        })
 
         const {value: numResidentes} = await Swal.fire({
             input: 'text',
