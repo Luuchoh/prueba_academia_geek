@@ -1,0 +1,80 @@
+<section class="list-prod-filtro">
+
+   <div class="filtro-dinero">
+       <h4>Precio</h4>
+       <form action="/producto/listado" method="GET">
+           <label for="precio-menor"></label>
+           <input type="number" name="precio-menor" id="precio-menor" placeholder="10">
+           <span>a</span>
+           <label for="precio-mayor"></label>
+           <input type="number" name="precio-mayor" id="precio-mayor" placeholder="80">
+           <button><i class="fas fa-sign-in-alt"></i></button>
+       </form>
+   </div>
+   <div class="filtro-categoria">
+       <h4>Categorias</h4>
+       <ul>
+           <li>
+               <a href="/producto/listado">
+                   Ropa mujer
+               </a>
+           </li>
+           <li>
+               <a href="/producto/listado">
+                   Camisas mujer
+               </a>
+           </li>
+           <li>
+               <a href="/producto/listado">
+                   Blusas mujer
+               </a>
+           </li>
+           <li>
+               <a href="/producto/listado">
+                   Ropa hombre
+               </a>
+           </li>
+           <li>
+               <a href="/producto/listado">
+                   Chaqueta hombre
+               </a>
+           </li>
+           <li>
+               <a href="/producto/listado">
+                   Pantalones
+               </a>
+           </li>
+           
+       </ul>
+   </div>
+   <div class="filtro-mejor-calificado">
+       <h4>Productos mejor calificados</h4>
+       <ul>
+           <% for(let i = 0; i < 3; i++){ %>                            
+               
+           <li>
+               <div class="fmc-imagen">
+                   <a href="/producto/detalle">
+                       <img src="/images/<%= producto[i].image %>" alt="<%= producto[i].image %>">
+                   </a>
+               </div>
+               <div class="fmc-descripcion">
+                   <a href="/producto/detalle"><%= producto[i].name %></a>
+                   <span>
+                       <i class="fas fa-star"></i>
+                       <i class="fas fa-star"></i>
+                       <i class="fas fa-star"></i>
+                       <i class="fas fa-star"></i>
+                       <i class="fas fa-star"></i>
+                   </span>
+                   <p>
+                       <%= producto[i].price %>
+                   </p>
+               </div>
+           </li>
+
+           <%}%>
+
+       </ul>
+   </div>
+</section>

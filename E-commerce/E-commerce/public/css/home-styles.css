@@ -1,0 +1,73 @@
+main header{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+}
+
+.banner{
+    height: 80vh;
+    box-sizing: border-box;
+}
+
+.banner img{
+    height: 100%;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.categ-productos{
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+article{
+    width: calc(50%-50px);
+}
+
+.prod-mujer{
+    padding: 20px;
+}
+
+.prod-mujer h3{
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.prod-mujer a img{
+    border-radius: 10px;
+    opacity: 1;
+    transition: all 1s;
+}
+
+.prod-mujer a img:hover{
+    opacity: 0.5;
+}
+
+.caracteristicas i{
+    color: #000033;
+    font-size: 50px;
+    padding-top: 50px;
+}
+.caracteristicas h4{
+    padding-top: 20px;
+}
+
+.caracteristicas__soporte{
+    padding-bottom: 50px;
+}
+
+
+/**************************************************** TABLETS MEDIA QUERIES**********************************************************************/
+
+@media(min-width: 769px){
+
+.caracteristicas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+}

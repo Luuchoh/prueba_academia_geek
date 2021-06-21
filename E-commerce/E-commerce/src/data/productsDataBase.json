@@ -1,0 +1,93 @@
+[
+    {
+       "id": 1,
+       "name": "Blusa Mujer Manga corta University Club",
+       "price": 19900,
+       "category": [
+          "Mujer"
+       ],
+       "description": "Blusa para Mujer, material viscosa, manga corta, estilo casual",
+       "image": "blusa-1.jpg",
+       "image2": "blusa-2.jpg",
+       "variations": [],
+       "tags": [
+          "Blusas"
+       ]
+    },
+    {
+       "id": 2,
+       "name": "Camiseta Mujer Manga Corta MNG",
+       "price": 29900,
+       "category": [
+          "mujer"
+       ],
+       "description": "Camisetas para mujer, material algodon organico, estilo casual, manga corta",
+       "image": "camiseta-1.png",
+       "image2": "camiseta-2.png",
+       "variations": [],
+       "tags": [
+          "camisetas"
+       ]
+    },
+    {
+        "id": 3,
+        "name": "Blusa Mujer Manga Larga University Club",
+        "price": 29900,
+        "category": [
+           "mujer"
+        ],
+        "description": "Blusa para mujer, material poliester, estilo casual, manga larga",
+        "image": "blusa-3.png",
+        "image2": "blusa-4.png",
+        "variations": [],
+        "tags": [
+           "blusa"
+        ]
+     },
+     {
+        "id": 4,
+        "name": "Chaqueta Hombre Bearcliff",
+        "price": 89900,
+        "category": [
+           "hombre"
+        ],
+        "description": "Chaqueta para hombre, material sintetico, estilo casual, diseño liso, manga larga",
+        "image": "chaqueta-1.png",
+        "image2": "chaqueta-2.png",
+        "variations": [],
+        "tags": [
+           "chaqueta"
+        ]
+     },
+     {
+        "id": 5,
+        "name": "Chaqueta Hombre Newboat",
+        "price": 83900,
+        "category": [
+           "hombre"
+        ],
+        "description": "Chaqueta para hombre, tipo parkas, material plastico, estilo casual, diseño liso, manga larga",
+        "image": "chaqueta-3.png",
+        "image2": "chaqueta-4.png",
+        "variations": [],
+        "tags": [
+           "chaqueta"
+        ]
+     },
+     {
+        "id": 6,
+        "name": "Chaqueta Hombre Newboat",
+        "price": 77900,
+        "category": [
+           "hombre"
+        ],
+        "description": "Chaqueta para hombre, material poliester, estilo casual, diseño liso, manga larga",
+        "image": "chaqueta-5.png",
+        "image2": "chaqueta-6.png",
+        "variations": [],
+        "tags": [
+           "chaqueta"
+        ]
+     }
+    
+ ]

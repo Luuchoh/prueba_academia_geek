@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head') %>
+            <link rel="stylesheet" href="/css/home-styles.css">
+            <title>TodoAviador - Inicio</title>
+        </head>
+        
+        <%- include('../partials/header') %>
+        
+        <main>
+            <header>
+                <section class="banner">
+                    <img src="/images/Slider.jpg" alt="">
+                </section>
+            </header>
+
+        
+            <section class="categ-productos">
+                <article>
+                    <div class="prod-mujer">
+                        <h3>Mujer</h3>
+                        <a href="producto/listado">
+                            <img src="/images/Prod_mujer.jpg" alt="">
+                        </a>
+                    </div>
+                </article>
+                <article>
+                    <div class="prod-mujer">
+                        <h3>Hombre</h3>
+                        <a href="producto/listado">
+                            <img src="/images/Prod_hombre.jpg" alt="">
+                        </a>
+                    </div>
+                </article>
+            </section>
+           
+            <section class="caracteristicas">
+                <div class="caracteristicas__envios">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h4>ENVÍOS GRATUITOS A TODO EL PAÍS</h4>
+                </div>
+                <div class="caracteristicas__cambios">
+                    <i class="fas fa-tags"></i>
+                    <h4>CAMBIOS Y DEVOLUCIONES</h4>
+                </div>
+                <div class="caracteristicas__soporte">
+                    <i class="fas fa-hands-helping"></i>
+                    <h4>24/7 SOPORTE AL CLIENTE</h4>
+                </div>
+            </section>
+        </main>
+        <%- include("../partials/footer") %>
+
+    
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <%- include('../partials/head') %>
+      <link rel="stylesheet" href="/css/styles.css">
+      <link rel="stylesheet" href="/css/sidebar_styles.css">
+      <title>Producto - TodoAviador</title>
+   </head>
+   <%- include('../partials/header') %>
+      <section class="ancho">
+         <div>
+          <h1>Productos</h1>
+         </div>
+         <div>
+          <nav>
+              <ul>
+                  <li class="home">
+                      <a href="/">
+                          <i class="fas fa-home"></i>
+                      </a>
+                      <span>></span>
+                  </li>
+                  <li>
+                      <a href="/producto/lista-producto">
+                        Tienda
+                      </a>
+                      <span>></span>
+                  </li>
+                  <li>
+                     <a href="/producto/lista-producto">
+                        <%= product.name %>
+                     </a>
+                 </li>
+              </ul>
+          </nav>
+         </div>
+      </section>
+      <main class="main-product-detail">
+         <%- include('../partials/sidebar') %>
+         <section class="product-page">
+            <section class="product-detail">
+               <div class="img-detail">
+                  <div class="prod-images">
+                     <img src= "/images/<%= product.image %>" alt="imagen-principal" class="main-img-prod">
+                     <div class="galery-img">
+                        <ul>
+                           <li><img src="/images/<%= product.image %>"  alt="<%= product.image %>"></li>
+                           <li><img src="/images/<%= product.image2 %>"  alt="<%= product.image %>"></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div>
+                     <h1><%= product.name %></h1>
+                     <h2 class="precio">S/<%= product.price %></h2>
+                     <p><%= product.description %></p>
+                     <h3>En stock</h3>
+                     <div class="add-cart">
+                        <button>-</button>
+                        <p>1</p>
+                        <button>+</button>
+                        <a href="/cart/<%= product.id %>"class="action-button add-cart-button">Agregar al carrito</a>
+                     </div>
+                     
+                  </div>
+               </div>
+               <section>
+                  <div>
+                     <h3>Descripción</h3>
+                     <p><%= product.description %></p>
+                  </div>
+                  <div class="share-product">
+                     <ul>
+                        <li>
+                           <a href="https://twitter.com/" target="_blank" >
+                              <i class="fab fa-twitter"></i>
+                              <p>Compartir en Twitter</p>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="https://www.facebook.com/" target="_blank">
+                              <i class="fab fa-facebook"></i>
+                              <p>Compartir en Facebook</p>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="https://www.pinterest.com/" target="_blank">
+                              <i class="fab fa-pinterest-p"></i>
+                              <p>Compartir en Pinterest</p>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <i class="fas fa-envelope"></i>
+                              <p>Compartir por correo</p>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </section>
+            </section>
+         
+         </section>
+      </main>
+      <%- include('../partials/footer') %>
+</html>

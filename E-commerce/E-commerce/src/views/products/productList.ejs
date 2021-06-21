@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include ('../partials/head') %>
+    <link rel="stylesheet" href="/css/list_products_styles.css">
+    <title>Todo aviador Perú | Carrito</title>
+</head>
+
+    <%- include("../partials/header") %>
+
+    <main>
+        <header>
+            <div class="ancho">
+                <h1>Productos</h1>
+                <nav>
+                    <ul>
+                        <li class="home">
+                            <a href="/">
+                                <i class="fas fa-home"></i>
+                            </a>
+                            <span>></span>
+                        </li>
+                        <li class="subtitulo">
+                            <a href="/producto/lista-producto">
+                            </a>
+                            <span>Productos</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="list-prod">
+            <%- include('../partials/sidebar') %>
+
+            <section class="list-prod-products">
+
+                <div class="list-header-desk-ordenar">
+                    <select name="header-desk-ordenar-por" id="header-desk-ordenar-por">
+                        <option value="1">Recomendados</option>
+                        <option value="2">Precio de menor a mayor</option>
+                        <option value="3">Precio de mayor a menor</option>
+                        <option value="4">Los mejores evaluados</option>
+                        <option value="5">Nuevos productos</option>
+                        <option value="6">Marcas</option>
+                    </select>
+                </div>
+
+                <div class="list-header-mob-filtros">
+                    <ul>
+                        <li class="list-header-mob-filter">
+                            <a href="">
+                                <i class="fas fa-filter"></i>
+                                <span>Filtrar</span>
+                            </a>
+                        </li>
+                        <li class="list-header-mob-order">
+                            <a href="">
+                                <i class="fas fa-sort"></i>
+                                <span>Ordenar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list-header-list-pag">
+                    <div class="list-pag-ant">
+                        <a href="/producto/listado">
+                            <i class="fas fa-chevron-left"></i>
+                            <span>anterior</span>
+                        </a>
+                    </div>
+                   
+                    <div class="list-pag-num">
+                        <span>Página</span>
+                        <a href="/producto/listado">1</a>
+                        <span>...</span>
+                        <a href="/producto/listado">2</a>
+                        <a href="/producto/listado">3</a>
+                        <span>...</span>
+                        <a href="/producto/listado">9</a>
+                    </div>
+                    
+                    <div class="list-pag-sig">
+                        <a href="/producto/listado">
+                            <span>siguiente</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+
+                <ul>
+                    <% producto.forEach( prod =>{ %>
+                    
+                    <li>
+                        <div class="prod-int-img-producto">
+                                    
+                            <img src="/images/<%= prod.image %>" alt="<%= prod.name %>" class="img1">
+                        
+                            <img src="/images/<%= prod.image2 %>" alt="<%= prod.name %>" class="img2">
+                        
+                        </div>
+                        <div class="prod-int-categorias">
+                            <a href="/producto/listado"><%= prod.category %></a>
+                            , 
+                            <a href="/producto/listado"> <%= prod.tags %></a>
+                        </div>
+                        <div class="prod-int-titulo">
+                            <h2><%= prod.name %></h2>
+                        </div>
+                        <div class="prod-int-precio">
+                            <span>$ <%= prod.price %></span>
+                        </div>
+                        <div class="prod-int-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="prod-int-btns">
+                            <a href="/cart/<%= prod.id %>">
+                                <button>Agregar al carrito</button>
+                            </a>
+                            <a href="/producto/detalle/<%= prod.id %>">
+                                <button>Vista rapida</button>
+                            </a>
+                        </div>
+                    </li>
+
+                    <% });%>
+
+                    <li>
+                        <div class="prod-int-img-producto">
+                                    
+                            <img src="/images/Defecto.jpg" alt="" class="img1">
+                        
+                            <img src="/images/Defecto2.jpg" alt="" class="img2">
+                        
+                        </div>
+                        <div class="prod-int-categorias">
+                            <a href="/producto/listado">cate </a>
+                            , 
+                            <a href="/producto/listado"> cat de cate</a>
+                        </div>
+                        <div class="prod-int-titulo">
+                            <h2>Nombre del producto</h2>
+                        </div>
+                        <div class="prod-int-precio">
+                            <span>$ 10000</span>
+                        </div>
+                        <div class="prod-int-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="prod-int-btns">
+                            <a href="/cart">
+                                <button>Agregar al carrito</button>
+                            </a>
+                            <a href="/producto/detalle/0001">
+                                <button>Vista rapida</button>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="prod-int-img-producto">
+                                    
+                            <img src="/images/Defecto.jpg" alt="" class="img1">
+                        
+                            <img src="/images/Defecto2.jpg" alt="" class="img2">
+                        
+                        </div>
+                        <div class="prod-int-categorias">
+                            <a href="/producto/listado">cate</a>
+                            , 
+                            <a href="/producto/listado"> cat de cate</a>
+                        </div>
+                        <div class="prod-int-titulo">
+                            <h2>Nombre del producto</h2>
+                        </div>
+                        <div class="prod-int-precio">
+                            <span>$ 10000</span>
+                        </div>
+                        <div class="prod-int-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="prod-int-btns">
+                            <a href="/cart">
+                                <button>Agregar al carrito</button>
+                            </a>
+                            <a href="/producto/detalle/0001">
+                                <button>Vista rapida</button>
+                            </a>
+                        </div>
+                    </li>
+
+                    
+                </ul>
+
+                <div class="list-header-list-pag">
+                    <div class="list-pag-ant">
+                        <a href="">
+                            <i class="fas fa-chevron-left"></i>
+                            <span>anterior</span>
+                        </a>
+                    </div>
+                   
+                    <div class="list-pag-num">
+                        <span>Página</span>
+                        <a href="">1</a>
+                        <span>...</span>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <span>...</span>
+                        <a href="">9</a>
+                    </div>
+                    
+                    <div class="list-pag-sig">
+                        <a href="">
+                            <span>siguiente</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+
+            </section>
+
+        </div>
+        
+    </main>
+
+    <%- include("../partials/footer") %>
+
+</body>
+</html>
